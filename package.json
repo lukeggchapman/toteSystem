@@ -2,9 +2,15 @@
   "name": "toteSystem",
   "version": "0.0.0",
   "description": "Basic tote system",
-  "main": "run.js",
+  "main": "lib/tote.js",
   "scripts": {
-    "test": "mocha"
+    "lint": "eslint -c .eslintrc lib",
+    "lint:test": "eslint -c .eslintrc test",
+    "pretest": "npm run lint",
+    "test": "mocha",
+    "precoverage": "npm run lint",
+    "coverage": "istanbul cover _mocha",
+    "postcoverage": "istanbul check-coverage --config=.istambul.yml"
   },
   "repository": {
     "type": "git",
@@ -15,5 +21,16 @@
   "bugs": {
     "url": "https://github.com/lukeggchapman/toteSystem/issues"
   },
-  "homepage": "https://github.com/lukeggchapman/toteSystem"
+  "homepage": "https://github.com/lukeggchapman/toteSystem",
+  "devDependencies": {
+    "mocha": "^2.2.5",
+    "chai": "^3.0.0",
+    "require-dir": "^0.3.0",
+    "istanbul": "^0.3.17",
+    "eslint": "^0.21.2"
+  },
+  "dependencies": {
+    "concat-stream": "^1.5.0",
+    "lodash": "^3.10.0"
+  }
 }

@@ -1,0 +1,11 @@
+{
+    "win": {
+        "commission": 0.15
+    },
+    "place": {
+        "commission": 0.12
+    },
+    "exacta": {
+        "commission": 0.18
+    }
+}
