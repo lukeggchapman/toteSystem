@@ -1,24 +1,25 @@
 /* globals describe, it */
 
-var stream = require('stream');
-var concat = require('concat-stream');
-
 var Tote   = require('../lib/tote');
 
 describe('tote System', function () {
   it('throws errors on incorrect constructor params', function () {
     expect(function () {
-      new Tote(1);
+      new Tote(1, function () {});
     }).to.throw('ToteSystem input must be a string');
 
     expect(function () {
-      new Tote('test', 1);
+      new Tote('test', function () {}, 1);
     }).to.throw('ToteSystem config must be a object');
+
+    expect(function () {
+      new Tote('test', 'test', 1);
+    }).to.throw('ToteSystem requires a callback function');
   });
 
   it('overrides config with passed param on init', function () {
     var newCommission = 0.05;
-    var tote = new Tote('test', {
+    var tote = new Tote('test:1:2:3', function () {}, {
       'win': {
         'commission': newCommission
       }
