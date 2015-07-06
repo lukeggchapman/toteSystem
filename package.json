@@ -1,0 +1,19 @@
+{
+  "name": "toteSystem",
+  "version": "0.0.0",
+  "description": "Basic tote system",
+  "main": "run.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/lukeggchapman/toteSystem.git"
+  },
+  "author": "Luke GG Chapman",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lukeggchapman/toteSystem/issues"
+  },
+  "homepage": "https://github.com/lukeggchapman/toteSystem"
+}
