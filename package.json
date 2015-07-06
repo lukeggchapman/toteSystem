@@ -27,7 +27,8 @@
     "chai": "^3.0.0",
     "require-dir": "^0.3.0",
     "istanbul": "^0.3.17",
-    "eslint": "^0.21.2"
+    "eslint": "^0.21.2",
+    "codeclimate-test-reporter": "^0.1.0"
   },
   "dependencies": {
     "concat-stream": "^1.5.0",
