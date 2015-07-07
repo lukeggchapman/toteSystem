@@ -7,6 +7,6 @@ var Tote = require('./lib/tote');
 process.stdin.setEncoding('utf8');
 process.stdin.pipe(concat(function (data) {
     var tote = new Tote(data, function (result) {
-        process.stdout.write(result);
+        process.stdout.write(result + '\n');
     });
 }));
